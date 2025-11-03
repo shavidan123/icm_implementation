@@ -1,0 +1,26 @@
+seed: 42
+results_path: results/plot_truthfulqa.png
+
+data:
+  train_path: data/truthfulqa_train.json
+  test_path:  data/truthfulqa_test.json
+
+  # sets limit on train/test examples for debugging, null means all
+  train_limit: null
+  test_limit: null
+
+gold:
+  max_ctx_demos: 256
+
+models:
+  base_id: meta-llama/Meta-Llama-3.1-405B
+  chat_id: meta-llama/Meta-Llama-3.1-405B-Instruct
+
+icm:
+  K_init: 12        # number of init labels
+  alpha: 30.0       # predictability weight
+  T0: 10.0          # init temp
+  Tmin: 0.01        # min temp
+  beta: 0.99        # temp decay
+  iters: 200        # steps
+  max_ctx_demos: 256 # max context for icl
