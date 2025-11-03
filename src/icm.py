@@ -7,7 +7,6 @@ from typing import Dict, List
 from src.utils import (
     build_truth_prompt,
     is_chat_model,
-    toplogprobs_dict,
     consistency_key_of,
     stable_order,
     single_token_toplogprobs,
@@ -131,8 +130,6 @@ class ICM:
         P = self.mutual_predictability(D, dataset)
         I = self.logical_consistency(D, dataset)
         return self.p.alpha * P - I
-
-    # -------------------- Search --------------------
 
     def sample_index(self, all_idxs: List[int], D: Dict[int, int], dataset) -> int:
         """
