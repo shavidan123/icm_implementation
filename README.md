@@ -20,7 +20,7 @@ or $env:HYPERBOLIC_API_KEY="...your-key..." (windows)
 OR set in config (worst case)
 I allowed you to set in the config for simplicity but this is bad api practice so don't do it
 
-**Step 3:** Configure the parameters of the run by modifying the config file. I wasn't sure the best way to do this, but it seemed to work well enough for the purposes of this experiment. It's mostly for tuning the ICM hyperparameters. I've currently just set them to the default ones mentioned in the paper.
+**Step 3:** Configure the parameters of the run by modifying the config file. I wasn't sure the best way to do this, but it seemed to work well enough for the purposes of this experiment. It's mostly for tuning the ICM hyperparameters. I've currently just set most of them to the default ones mentioned in the paper, except I added a few more labels to the initial dataset size to set it to 12.
 
 **Step 4:** Run the code and see the results
 
